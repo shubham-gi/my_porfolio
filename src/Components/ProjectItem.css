@@ -1,0 +1,67 @@
+.project-item2{
+    height: 510px;
+    width: 370px;
+    padding: 20px;
+    background-color: rgb(34, 34, 124);
+    background-color :rgb(21, 16, 48);
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+    
+}
+.github{
+    width: 60px;
+    height: 60px;
+    background: linear-gradient( to right, #434343, #000000 );
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 110;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.githubLogo{
+
+    width: 30px;
+    
+}
+.projectPhoto{
+    width: 355px;
+    border-radius: 15px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+.description{
+    color: #AAA6c3;
+}
+.hashtag{
+    color: white;
+}
+@media (max-width:700px) {
+    .githubLogo{
+        width: 30px;
+    }
+    .github{
+        width: 50px;
+        height: 50px;
+    }
+    .project-item2{
+        /* height: 500px; */
+        width: 280px;
+    }
+    .projectPhoto{
+        width: 270px;
+        border-radius: 15px;
+
+    }
+}

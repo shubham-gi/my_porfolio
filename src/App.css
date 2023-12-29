@@ -16,3 +16,7 @@ a{
   display: flex;
   flex-direction: column;
 }
+.cont{
+  position: relative;
+  z-index: 0;
+}

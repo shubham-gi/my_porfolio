@@ -1,0 +1,78 @@
+.project{
+    margin: 50px 200px;
+}
+#project{
+    position: absolute;
+}
+.projectHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    font-size: 60px;
+    width: 100%;
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(135deg,  #080808 0%,#080808 2%,#0d0d0c 4%,#0d0c0b 6%,#0a0907 7%,#130f0f 9%,#0b0706 10%,#080605 12%,#090806 12%,#050402 14%,#060604 14%,#050402 16%,#0b0908 17%,#080605 19%,#0c090a 21%,#090708 22%,#0b090a 25%,#060503 29%,#080605 30%,#0d0b09 30%,#0b0907 31%,#0b0a07 32%,#100e0b 34%,#080704 37%,#0a0807 39%,#070503 41%,#060503 47%,#08080a 48%,#030305 49%,#050506 50%,#040304 51%,#060606 52%,#040403 53%,#0a0a07 56%,#080702 58%,#1a140b 59%,#19150e 60%,#110f09 60%,#0c0c09 61%,#0d0e0d 61%,#060506 63%,#0e0b0d 63%,#1d1819 64%,#676162 65%,#251d1f 65%,#312729 66%,#1f1619 66%,#11080b 67%,#140d11 68%,#0b0709 69%,#050404 70%,#060606 71%,#030303 74%,#030406 80%,#080404 83%,#020306 86%,#080b0c 87%,#030606 88%,#030503 88%,#080905 89%,#040400 89%,#070600 90%,#060300 91%,#100d09 92%,#0d0a07 93%,#110f0d 94%,#070504 94%,#070604 95%,#040302 96%,#080606 96%,#040300 99%,#060501 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.project-item{
+    max-width: 900px;
+}
+.project .subHeading{
+    font-size: 40px;
+    margin: 20px 0px;
+}
+.project>.mainHeading{
+    font-weight: 900;
+}
+.messageProject{
+    max-width: 1200px;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.project-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 150px 20px;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+@media ( min-width:500px) and (max-width:1200px) {
+    .project{
+        margin: 50px 10px;
+    }
+    
+}
+@media (max-width:600px) {
+    .project-list{
+        margin: 100px 5px;
+        flex-direction: column;
+        
+    }
+    .project>.mainHeading{
+        font-weight: 900;
+
+        font-size: 70px;
+    }
+    .project{
+        margin: 50px 30px;
+
+    }
+    .projectHead{
+        
+        font-size: 60px;
+    }
+    .project .subHeading{
+        font-size: 40px;
+    }
+    
+    .messageProject{
+        font-size: 18px;
+    
+    }
+}

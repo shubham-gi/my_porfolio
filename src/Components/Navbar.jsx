@@ -1,25 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
-import logo from "../assets/logo1.png";
-import profilePhoto from "../assets/profilePhoto.jpg";
+// import logo from "../assets/logo1.png";
+// import profilePhoto from "../assets/profilePhoto.jpg";
 import about from "../assets/about.png";
 import contact from "../assets/contact.png";
 import home from "../assets/home.png";
-import twitter from "../assets/twitter.png";
-import linkedin from "../assets/linkedin.png";
-import instagram from "../assets/instagram.png";
+// import twitter from "../assets/twitter.png";
+// import linkedin from "../assets/linkedin.png";
+// import instagram from "../assets/instagram.png";
 import project from "../assets/project.png";
 import menuPhoto from "../assets/menu.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const newRef = useRef(null);
-
-  const location = useLocation();
-  console.log(location.pathname);
+  const [active, setActive] = useState("");
   const [clicked, setclicked] = useState(false);
   const handleClick = () => {
-    console.log("button clicked");
     setclicked(true);
   };
   const handleOutsideClick = (e) => {
@@ -35,8 +32,9 @@ const Navbar = () => {
   });
   return (
     <div className="navbar">
-      <div className="left">
-        <img src={logo} alt="" className="logo" />
+      <div className="left ">
+        <img src={null} alt="" className="logo" />
+        <p>Shubham</p>
       </div>
       <div className="contains" ref={newRef}>
         <div
@@ -48,76 +46,98 @@ const Navbar = () => {
         <div className={`dropdown ${clicked ? "" : "hidden"}`}>
           <Link
             to="/"
-            class={`item ${location.pathname === "/" ? "active-item" : ""}`}
+            className={`item ${active === "" ? "active-item" : ""}`}
+            onClick={()=>{
+              setActive("")
+              window.scrollTo(0,0);
+            }}
           >
             <img
               src={home}
               alt=""
-              class={`small-logo activeImg ${
-                location.pathname === "/" ? "active-img" : ""
+              className={`small-logo activeImg ${
+                active === "" ? "active-img" : ""
               }`}
             />
             <span>Home</span>
           </Link>
-          <Link
-            to="/about"
-            class={`item ${location.pathname === "about" ? "active-item" : ""}`}
+          <a
+            href="#about"
+            className={`item ${active === "about" ? "active-item" : ""}`}
+            onClick={()=>{
+              setActive('about')
+            }}
           >
             <img
               src={about}
               alt=""
-              class={`small-logo activeImg ${
-                location.pathname === "/about" ? "active-img" : ""
+              className={`small-logo activeImg ${
+                active === "about" ? "active-img" : ""
               }`}
             />
             <span>About me</span>
-          </Link>
-          <Link
-            to="/project"
-            class={`item ${
-              location.pathname === "project" ? "active-item" : ""
+          </a>
+          <a
+            href="#project"
+            className={`item ${
+              active === "project" ? "active-item" : ""
             }`}
+            onClick={()=>{
+              setActive('project')
+            }}
           >
             <img
               src={project}
               alt=""
-              class={`small-logo activeImg ${
-                location.pathname === "/project" ? "active-img" : ""
+              className={`small-logo activeImg ${
+                active === "project" ? "active-img" : ""
               }`}
             />
             <span>Projects</span>
-          </Link>
-          <Link
-            to="contact"
-            class={`item ${
-              location.pathname === "contact" ? "active-item" : ""
+          </a>
+          <a
+            href="contact"
+            className={`item ${
+              active === "contact" ? "active-item" : ""
             }`}
+            onClick={()=>{
+              setActive('contact')
+            }}
           >
             <img
               src={contact}
               alt=""
-              class={`small-logo activeImg ${
-                location.pathname === "/contact" ? "active-img" : ""
+              className={`small-logo activeImg ${
+                active === "contact" ? "active-img" : ""
               }`}
             />
             <span>Contact</span>
-          </Link>
+          </a>
         </div>
       </div>
 
       <div className="right ">
-        <Link to="/" className="nav-item">
+        <Link to="/" className={`nav-item ${active===''?'active':''}`} onClick={()=>{
+          setActive('')
+          window.scrollTo(0,0);
+        }}>
           Home
         </Link>
-        <Link to="about" className="nav-item">
+        <a href="#about" className={`nav-item ${active==='about'?'active':''}`} onClick={()=>{
+          setActive('about')
+        }}>
           About
-        </Link>
-        <Link to="project" className="nav-item">
+        </a>
+        <a href="#project" className={`nav-item ${active==='project'?'active':''}`} onClick={()=>{
+          setActive('project')
+        }}>
           Projects
-        </Link>
-        <Link to="/contact" className="nav-item">
-          Contact Me
-        </Link>
+        </a>
+        <a href="#contact" className={`nav-item ${active==='contact'?'active':''}`} onClick={()=>{
+          setActive('contact')
+        }}>
+          Contact
+        </a>
       </div>
     </div>
   );
