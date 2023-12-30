@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { background1, background2, background3 } from "../assets/background";
+import React from "react";
+// import { background1, background2, background3 } from "../assets/background";
 import "./Home.css";
 const Home = () => {
   // useEffect(() => {

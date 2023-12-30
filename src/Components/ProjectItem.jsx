@@ -3,7 +3,6 @@ import './ProjectItem.css'
 import githubLogo from '../assets/github.png'
 const ProjectItem = ({project,hashtags}) => {
     const {title,description,photo,github}=project
-     console.log(hashtags)
   return (
     <div className='project-item2'>
      <a href={github} className="github">
@@ -14,7 +13,7 @@ const ProjectItem = ({project,hashtags}) => {
         <p className="title">{title}</p>
         <p className="description">{description}</p>
         <p className="hashtag">{hashtags.map((item)=>(
-            <span className='hash-item'>{item} &nbsp;</span>
+            <span key={item} className='hash-item'>{item} &nbsp;</span>
         ))}
         </p>
      </div>

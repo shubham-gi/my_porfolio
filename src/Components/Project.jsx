@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <div className='container'>
       <span id='project'></span>
-
+      <div className="prjectHeading">PROJECTS</div>
       <div className="projectHead">
         Projects
       </div>
@@ -20,7 +20,7 @@ const Project = () => {
       <div className="project-list">
         {projects.map((project)=>(
           
-          <ProjectItem key={project.id} project={project} hashtags={project.hastags}/>
+          <ProjectItem key={project.title} project={project} hashtags={project.hastags}/>
           ))}
       </div>
     </div>

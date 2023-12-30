@@ -11,11 +11,14 @@ import home from "../assets/home.png";
 import project from "../assets/project.png";
 import menuPhoto from "../assets/menu.png";
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const newRef = useRef(null);
   const [active, setActive] = useState("");
+  
   const [clicked, setclicked] = useState(false);
+  const [isScrolled, setisScrolled] = useState(false);
   const handleClick = () => {
     setclicked(true);
   };
@@ -30,20 +33,34 @@ const Navbar = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   });
+  useEffect(() => {
+    const onScroll=()=>{
+      if(window.scrollY>780){
+        setisScrolled(true)
+      }
+      else setisScrolled(false)
+    }
+    
+    window.addEventListener('scroll',onScroll);
+    return () => {
+      window.removeEventListener('scroll',onScroll)
+    };
+    // eslint-disable-next-line
+  }, []);
   return (
-    <div className="navbar">
+    <div className={`navbar ${isScrolled?"scroll":''}`}>
       <div className="left ">
-        <img src={null} alt="" className="logo" />
-        <p>Shubham</p>
+        <img src={logo} alt="" className="logo" />
+        
       </div>
       <div className="contains" ref={newRef}>
         <div
-          className={`menu ${clicked ? "hidden" : ""}`}
+          className={`menu ${clicked ? "hidden" : ""} ${isScrolled?"dark":''}`}
           onClick={handleClick}
         >
           <img src={menuPhoto} alt="menu" className="menuPhoto" />
         </div>
-        <div className={`dropdown ${clicked ? "" : "hidden"}`}>
+        <div className={`dropdown ${clicked ? "" : "hidden"} ${isScrolled?"scroll":''}`} >
           <Link
             to="/"
             className={`item ${active === "" ? "active-item" : ""}`}
@@ -96,7 +113,7 @@ const Navbar = () => {
             <span>Projects</span>
           </a>
           <a
-            href="contact"
+            href="#contact"
             className={`item ${
               active === "contact" ? "active-item" : ""
             }`}

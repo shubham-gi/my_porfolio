@@ -2,50 +2,55 @@
     --border-radius:19px;
 }
 .logo {
-  width: 40px;
+  width: 80px;
+  border-radius: 10px;
+
+
 }
 .navbar {
-    margin-top: 10px;
+  
+  height: 90px;
   display: flex;
-  justify-content: space-between;
   /* background-color: black; */
   position: fixed;
   width: 100%;
+  gap: 30px;
   /* background-color: rgba(54, 54, 54, 0.511); */
   z-index: 10;
 }
 .left {
   margin-left: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 10px ;
   align-items: center;
-  gap: 10px;
   color: white;
+  padding: 10px;
 }
 .nav-item {
-  color: white;
-  font-family: serif;
+  color: rgb(193, 193, 193);
   padding: 10px 15px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 100;
+  font-family: "Poppins", sans-serif;
+
 }
 .nav-item:hover,
 .active {
-    border: 1px solid white;
+  color: white;
+  font-weight: 700;
 }
 .right {
   display: flex;
-  color: white ;
-  width: 420px;
-  margin: 0 10px;
   align-items: center;
+
 }
 .menu {
   display: none;
   cursor: pointer;
 }
 .menuPhoto {
-  width: 30px;
+  width: 40px;
   filter: invert(1);
 }
 .dropdown {
@@ -57,26 +62,40 @@
 }
 .small-logo {
   width: 20px;
-  filter: invert(.9);
+  filter: invert(.7);
   margin: 5px 8px 5px 5px;
 }
-
-@media (max-width: 600px) {
+.logoName{
+  font-size: 40px;
+}
+.dark{
+  filter: invert(.1);
+}
+@media (max-width: 710px) {
+  .left{
+    padding: 0px;
+  }
+  .navbar{
+    height: 70px;
+  }
+  .logo{
+    width: 60px;
+  }
   .right {
     display: none;
   }
   .menu {
     display: block;
     position: absolute;
-    top: 5px;
+    top: 15px;
     right: 15px;
     cursor: pointer;
   }
   .dropdown {
     position: absolute;
-    top: 5px;
-    right: 10px;
-    color: white;
+    top: 25px;
+    right: 20px;
+    color: rgb(209, 209, 209);
     /* position: absolute; */
     /* right: 20px; */
     height: 180px;
@@ -84,11 +103,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.463);
+
+    
   }
   
   .item {
-    color: rgb(255, 255, 255);
+    color: rgb(202, 202, 202);
     font-size: 15px;
     padding: 0px 13px;
     height: 100%;
@@ -97,14 +118,16 @@
   }
   .active-item,
   .item:hover {
-    color: black;
-    background-color: white;
+    color: white;
 
   }
   .active-img {
-    filter: invert(.1);
+    filter: invert(1);
   }
 }
 .hidden {
   display: none;
+}
+.scroll{
+  background-color: rgba(0, 0, 0, 0.555);
 }

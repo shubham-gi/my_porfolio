@@ -1,3 +1,6 @@
+.container{
+    position: relative;
+}
 .project{
     margin: 50px 200px;
 }
@@ -9,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 420px;
-    font-size: 60px;
+    font-size: 80px;
     width: 100%;
     font-weight: 900;
     color: white;
@@ -42,13 +45,27 @@
     justify-content: center;
 
 }
+.prjectHeading{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.121);
+    top: 170px;
+    left: 600px;
+    font-size: 90px;
+    display: none;
+}
 @media ( min-width:500px) and (max-width:1200px) {
+    .prjectHeading{
+        display: none;
+    }
     .project{
         margin: 50px 10px;
     }
     
 }
 @media (max-width:600px) {
+    .prjectHeading{
+        display: none;
+    }
     .project-list{
         margin: 100px 5px;
         flex-direction: column;

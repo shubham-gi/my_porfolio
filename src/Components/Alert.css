@@ -1,0 +1,25 @@
+.hidden{
+    display: none;
+}
+.alert{
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    font-size: 25px;
+    background-color: rgb(16, 13, 37);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+.alertMessage{
+    padding: 0px 5px;
+}
+@media (max-width:700px) {
+    .alert{
+        font-size: 18px;
+        padding: 10px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        background-color: rgb(50, 46, 76);
+    }
+}
