@@ -12,7 +12,7 @@
     font-size: 60px;
 
 background: linear-gradient(135deg,  #4025a8 0%,#4729ad 0%,#4727ac 1%,#4f2aad 1%,#5028ac 2%,#552cae 2%,#5e2fb3 3%,#602eb1 3%,#602eb1 3%,#592aae 4%,#562db1 4%,#4a29ac 5%,#3c2cb1 6%,#3127aa 7%,#2d2aaf 8%,#2b29ae 8%,#2b2bb1 12%,#2c2fb4 13%,#2730b3 14%,#2832b5 16%,#272fb4 16%,#2d35ba 19%,#2c34b9 20%,#2e37ba 20%,#2f36b8 20%,#333abc 22%,#3439bb 23%,#383dbf 24%,#363ebd 24%,#3b40be 26%,#4044c2 28%,#3d45c1 28%,#4045c3 29%,#3d47ca 31%,#3a48c5 32%,#3a4cca 33%,#414fca 35%,#4752ce 35%,#4251c8 36%,#4554cb 37%,#4453ca 37%,#4a56cc 38%,#4d56cb 38%,#565cce 39%,#5759c6 40%,#615ec7 41%,#625dc4 41%,#6b5cc3 42%,#9568c7 43%,#a569c1 43%,#c572ba 44%,#f279bc 45%,#f475b8 45%,#ef72b6 45%,#e873b9 45%,#b96bb7 46%,#b66dbc 46%,#b56cbd 47%,#b96cbc 47%,#c473c0 48%,#cc7fc5 48%,#c877c4 49%,#c073c5 49%,#b175cb 50%,#a472c7 50%,#9e71c6 50%,#ac78ca 51%,#b879c8 51%,#be7dcf 52%,#bb81ce 52%,#b581cc 53%,#b385d0 53%,#af88d7 53%,#a285d7 54%,#8376ce 54%,#7a77d0 54%,#697dd4 55%,#667fdb 56%,#7687d9 59%,#7a86da 59%,#8189dc 60%,#838ada 60%,#8c8ed9 61%,#9791d9 61%,#a497dd 61%,#ab91d8 62%,#af95de 62%,#ab97df 63%,#948ed8 63%,#898dd7 63%,#8091d9 64%,#7c92db 64%,#839ade 66%,#8599de 67%,#8c9fe3 69%,#909edf 69%,#9ea2e1 70%,#a6a2df 71%,#aaa2de 71%,#a7a1dd 71%,#beacea 72%,#bfa9e7 72%,#b7a5df 73%,#a5a4dd 73%,#a2a9e0 74%,#a6abe5 74%,#a8aae3 75%,#a4abdf 75%,#a4abe1 75%,#b2b5e2 78%,#b4b5e1 79%,#c7bbe1 81%,#c7bcde 81%,#cec0da 82%,#d2c2dc 82%,#dbc2d8 83%,#e9cadc 84%,#f7cfd8 86%,#f7d0d5 88%,#f8cecf 89%,#fbd0ca 91%,#fcccc2 92%,#f9c7be 93%,#fcc8bd 93%,#fcc4b7 94%,#f9bbae 96%,#fcb3aa 98%,#feb4ab 98%,#fcafa9 98%,#fbaca8 99%,#f9a8a4 99%,#faa7a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    height: 420px;
+    height: 220px;
     width: 100%;
 }
 .introduction{
@@ -143,7 +143,7 @@ background: linear-gradient(135deg,  #4025a8 0%,#4729ad 0%,#4727ac 1%,#4f2aad 1%
         width: auto;
     }
     .introCol2{
-        width: 100%;
+        width: 90%;
     }
     .introduction{
         flex-wrap: wrap;

@@ -1,8 +1,8 @@
 import React from "react";
 import "./About.css";
 import profilePhoto from "../assets/aboutphoto.png";
-import {web,mobile,backend} from '../assets/tech'
-const cv = require("../assets/shubhamResume3.pdf");
+import {web,mobile,backend,next} from '../assets/tech'
+const cv = require("../assets/resume-v2.pdf");
 const About = () => {
   return (
     <div className="about">
@@ -23,7 +23,7 @@ const About = () => {
           <p className="mainHeading">About Me.</p>
           <p className="subHeading">
             I'm a web developer with experience in JavaScript, and expertise in
-            frameworks like React, Node.js. I'm a quick learner and collaborate
+            frameworks like Next.Js, React, Node.js and Express.Js . I'm a quick learner and collaborate
             closely with other fellowmates to create efficient, scalable, and
             user-friendly solutions that solve real-world problems. Let's work
             together to bring your ideas to life!
@@ -34,20 +34,11 @@ const About = () => {
         </div>
         <img src={profilePhoto} alt="profilePhoto" className="introCol2" />
       </div>
-      <div className="ongoingProj">
-        <div className="item1">
-          <p className="number">5+</p>
-          
-          <p className="subheading1">Total Projects</p>
-        </div>
-        <div className="item1">
-          <p className="number">3+</p>
-          
-          <p className="subheading1">Ongoing Projects</p>
-        </div>
-        
-      </div>
       <div className="tech">
+        <div className="tech-item">
+          <img src={next} alt="" className="tech-img"/>
+          <p className="tech-name">NextJs <br /> Developer</p>
+        </div>
         <div className="tech-item">
           <img src={web} alt="" className="tech-img"/>
           <p className="tech-name">Web <br /> Developer</p>
@@ -60,6 +51,19 @@ const About = () => {
           <img src={backend} alt="" className="tech-img"/>
           <p className="tech-name">Backend <br /> Developer</p>
         </div>
+      </div>
+      <div className="ongoingProj">
+        <div className="item1">
+          <p className="number">5+</p>
+          
+          <p className="subheading1">Total Projects</p>
+        </div>
+        <div className="item1">
+          <p className="number">1</p>
+          
+          <p className="subheading1">Ongoing Projects</p>
+        </div>
+        
       </div>
       
     </div>

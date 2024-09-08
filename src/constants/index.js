@@ -5,20 +5,20 @@ const projects = [
   {
     id: 1,
     photo: inotebook,
-    title: "iNotebook",
+    title: "NoteMaker",
     description:
-      "Web-based platform that allows users to search, store, and manage their short notes. Using ReactJs, NodeJs, ExpressJs, and for database mongoDB.",
+      "Web-based platform that allows users to search, store, and manage their short notes. Using ReactJs, NodeJs, ExpressJs, and for database PostGresSQL.",
     hastags: ["#react", "#mongodb", "#bootstrap"],
-    github: "https://github.com/shubham-gi?tab=repositories",
+    github: "https://github.com/shubham-gi/notemaker",
   },
   {
     id: 2,
     photo: gymSite,
-    title: "Gym Website",
+    title: "Meeting's App",
     description:
-      "A website where both trainer and the gym enthusiasts can meet. Virtual sessions can be organnized. Payment, authentication etc. will be added on later stage.",
+      "Developed a Web App for Notes management. Also made a chrome extension using ML model transformer and YouTube transcript API. This extension also allows users summarise the YouTube videos and save the summarised code in their account through a using the Web App.",
     hastags: ["#react", "#mongodb", "#tailwind"],
-    github: "https://github.com/shubham-gi/gymWebsite",
+    github: "https://github.com/shubham-gi/meeting-app",
   },
   {
     id: 3,
